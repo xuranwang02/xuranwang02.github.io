@@ -36,8 +36,8 @@ window.SITE_DATA = {
       },
       {
         icon: "scholar",
-        label: "ISCAS · Software Engineering",
-        url: ""
+        label: "ISRC · ISCAS",
+        url: "https://isrc.iscas.ac.cn/"
       },
       {
         icon: "github",
@@ -59,7 +59,7 @@ window.SITE_DATA = {
     emoji: "",
     heading: "About Me",
     paragraphs: [
-      'I am a Master\'s student in Software Engineering at the <strong>Institute of Software, Chinese Academy of Sciences (ISCAS)</strong>, advised by <a href="https://people.ucas.edu.cn/~heng" target="_blank" rel="noopener">Prof. Heng Zhang</a>. Prior to that, I received my B.Eng. degree in Software Engineering from <strong>Northeastern University (NEU)</strong>, where I was honored with the National Scholarship and Outstanding Graduate of Liaoning Province.',
+      'I am a Master\'s student in Software Engineering at the <a href="https://isrc.iscas.ac.cn/" target="_blank" rel="noopener">Intelligent Software Research Center (ISRC)</a>, <strong>Institute of Software, Chinese Academy of Sciences (ISCAS)</strong>, advised by <a href="https://people.ucas.edu.cn/~heng" target="_blank" rel="noopener">Prof. Heng Zhang</a>. Prior to that, I received my B.Eng. degree in Software Engineering from <strong>Northeastern University (NEU)</strong>, where I was honored with the National Scholarship and Outstanding Graduate of Liaoning Province.',
       "My work bridges high-performance systems engineering and modern AI workloads. Specifically, my research and engineering interests include:"
     ],
     interests: [
@@ -172,7 +172,7 @@ window.SITE_DATA = {
             org: "Institute of Software, Chinese Academy of Sciences (ISCAS)",
             period: "2024.10 — Present",
             role: "Graduate Researcher · High-Performance Graph & GPU Computing Systems",
-            lab: null
+            lab: { name: "ISRC", url: "https://isrc.iscas.ac.cn/" }
           },
           {
             logo: "assets/images/logo-cas.png",
@@ -181,7 +181,7 @@ window.SITE_DATA = {
             org: "Institute of Software, Chinese Academy of Sciences (ISCAS)",
             period: "2023.06 — 2024.10",
             role: "Research Intern · Fast Temporal Subgraph Matching Framework (TeMatch, ICDE 2025)",
-            lab: null
+            lab: { name: "ISRC", url: "https://isrc.iscas.ac.cn/" }
           }
         ]
       },
@@ -195,7 +195,7 @@ window.SITE_DATA = {
             org: "Institute of Software, Chinese Academy of Sciences (ISCAS)",
             period: "2025.09 — 2028.06 (expected)",
             role: "M.Eng. in Software Engineering",
-            lab: null
+            lab: { name: "ISRC", url: "https://isrc.iscas.ac.cn/" }
           },
           {
             logo: "assets/images/logo-neu.png",
