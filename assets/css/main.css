@@ -20,7 +20,7 @@
   --border-btn: #bdc1c4;
   --border-input: #cfd4d8;
   --focus-outline: #224b8d;
-  --font-sans: "Trebuchet MS", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: "Trebuchet MS", Helvetica, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: Monaco, Consolas, "Lucida Console", ui-monospace, monospace;
   --masthead-height: 60px;
 }
