@@ -257,21 +257,21 @@ window.SITE_DATA = {
         name: "Yiran Zhu",
         url: "https://yiranzhu06.github.io/",
         affiliation: "Research Intern · LivSyn Robotics | Incoming Master's Student · BIVLab, USTC",
-        text: "Thank you for your genuine warmth and kindness, and for so generously sharing inspired research ideas, cutting-edge technologies, and invaluable ICLR rebuttal experience."
+        text: "Both a mentor and a cherished friend along my research path, Yiran has always met every conversation with genuine warmth and generosity. His vibrant, original research ideas, sharp perspective on emerging technologies, and candid ICLR rebuttal insights have inspired me time and again."
       },
       {
         id: "kaifan-jia",
         name: "Kaifan Jia",
         url: "",
-        affiliation: "ISRC · Institute of Software, Chinese Academy of Sciences (ISCAS)",
-        text: "Thank you for guiding me into the fields of high-performance computing (HPC) and AI. Your sharp and active research thinking, along with your generosity in sharing cutting-edge research ideas, has continually broadened my horizons."
+        affiliation: "Senior Labmate · ISRC, Institute of Software, Chinese Academy of Sciences (ISCAS)",
+        text: "Both a senior mentor and a close friend in the lab, Kaifan opened the door for me to high-performance computing and AI. His lively, sharp research instincts and generosity in sharing frontier ideas have continuously sparked new directions in my own work."
       },
       {
         id: "yongchun-jiang",
         name: "Yongchun Jiang",
         url: "",
-        affiliation: "ISRC · Institute of Software, Chinese Academy of Sciences (ISCAS)",
-        text: "Thank you for nurturing my logical research thinking and habit of rigorous self-questioning, for helping me grasp the fundamental principles of academic writing, and for guiding me into the field of temporal graph research."
+        affiliation: "Senior Labmate · ISRC, Institute of Software, Chinese Academy of Sciences (ISCAS)",
+        text: "Both a senior mentor and a trusted friend, Yongchun introduced me to temporal graph research and profoundly shaped the way I think about science. His emphasis on rigorous research logic, disciplined self-questioning, and the underlying craft of academic writing has left a lasting mark on how I approach every problem and paper."
       }
     ]
   },
