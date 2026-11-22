@@ -272,6 +272,13 @@ window.SITE_DATA = {
         url: "",
         affiliation: "Senior Labmate · ISRC, Institute of Software, Chinese Academy of Sciences (ISCAS)",
         text: "Both a senior mentor and a trusted friend, Yongchun introduced me to temporal graph research and profoundly shaped the way I think about science. His emphasis on rigorous research logic, disciplined self-questioning, and the underlying craft of academic writing has left a lasting mark on how I approach every problem and paper."
+      },
+      {
+        id: "haolin-jiang",
+        name: "Haolin Jiang",
+        url: "https://www.linkedin.com/in/haolin-jiang-ba2062303",
+        affiliation: "Research Collaborator · TeMatch (ICDE 2025)",
+        text: "Working on TeMatch marked my very first foray into academic research, and Haolin was the one who patiently walked me through the experimental framework from the ground up. His steady guidance and willingness to answer every question gave me the confidence and practical grounding to take my first steps as a researcher."
       }
     ]
   },
