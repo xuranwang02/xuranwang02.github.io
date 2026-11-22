@@ -263,14 +263,14 @@ window.SITE_DATA = {
         id: "kaifan-jia",
         name: "Kaifan Jia",
         url: "",
-        affiliation: "Senior Labmate · ISRC, Institute of Software, Chinese Academy of Sciences (ISCAS)",
+        affiliation: "Ph.D. Student · ISRC, Institute of Software, Chinese Academy of Sciences (ISCAS)",
         text: "Both a senior mentor and a close friend in the lab, Kaifan opened the door for me to high-performance computing and AI. His lively, sharp research instincts and generosity in sharing frontier ideas have continuously sparked new directions in my own work."
       },
       {
         id: "yongchun-jiang",
         name: "Yongchun Jiang",
         url: "",
-        affiliation: "Senior Labmate · ISRC, Institute of Software, Chinese Academy of Sciences (ISCAS)",
+        affiliation: "Ph.D. Student · ISRC, Institute of Software, Chinese Academy of Sciences (ISCAS)",
         text: "Both a senior mentor and a trusted friend, Yongchun introduced me to temporal graph research and profoundly shaped the way I think about science. His emphasis on rigorous research logic, disciplined self-questioning, and the underlying craft of academic writing has left a lasting mark on how I approach every problem and paper."
       },
       {
