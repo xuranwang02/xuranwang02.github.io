@@ -249,7 +249,7 @@ window.SITE_DATA = {
         id: "changsheng-zhang",
         name: "Changsheng Zhang",
         url: "https://faculty.neu.edu.cn/zhangchangsheng/zh_CN/index.htm",
-        affiliation: "Professor · Software College, Northeastern University (NEU)",
+        affiliation: "Tenured Professor · Software College, Northeastern University (NEU)",
         text: "I am sincerely grateful to my undergraduate advisor, Prof. Changsheng Zhang, for his patient supervision and valuable guidance throughout my undergraduate thesis at Northeastern University. His rigor and encouragement laid a solid foundation for my subsequent graduate research."
       },
       {
@@ -277,7 +277,7 @@ window.SITE_DATA = {
         id: "haolin-jiang",
         name: "Haolin Jiang",
         url: "https://www.linkedin.com/in/haolin-jiang-ba2062303",
-        affiliation: "Research Collaborator · TeMatch (ICDE 2025)",
+        affiliation: "Ph.D. Student in Computer Engineering · Rutgers University–New Brunswick",
         text: "Working on TeMatch marked my very first foray into academic research, and Haolin was the one who patiently walked me through the experimental framework from the ground up. His steady guidance and willingness to answer every question gave me the confidence and practical grounding to take my first steps as a researcher."
       }
     ]
