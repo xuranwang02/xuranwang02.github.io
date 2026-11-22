@@ -190,43 +190,6 @@ img {
   transform: scaleX(1);
 }
 
-/* Minimalist EN / 中文 Language Switcher */
-.lang-switch {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-  flex-shrink: 0;
-  padding-left: 0.65rem;
-  border-left: 1px solid var(--border-card);
-  font-size: 0.84rem;
-}
-
-.lang-btn {
-  background: none;
-  border: none;
-  padding: 0.15rem 0.28rem;
-  font-family: var(--font-sans);
-  font-size: 0.84rem;
-  color: var(--text-muted);
-  cursor: pointer;
-  border-radius: 3px;
-  transition: color 0.15s ease, background-color 0.15s ease;
-}
-
-.lang-btn:hover {
-  color: var(--text-strong);
-}
-
-.lang-btn[aria-pressed="true"] {
-  color: var(--text-strong);
-  font-weight: 700;
-}
-
-.lang-sep {
-  color: var(--border-rail);
-  user-select: none;
-}
-
 /* ==========================================================================
    Main Two-Column Grid Container
    ========================================================================== */

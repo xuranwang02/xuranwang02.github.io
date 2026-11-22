@@ -30,32 +30,24 @@
       '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>'
   };
 
-  // Persistent UI state across language switches
   const state = {
-    lang: resolveInitialLang(),
+    lang: "en",
     activeAckId: null,
     emailVisible: false,
     messageOpen: false,
     activeNavId: "about-me"
   };
 
-  function resolveInitialLang() {
-    try {
-      const params = new URLSearchParams(window.location.search);
-      const urlLang = params.get("lang");
-      if (urlLang === "en" || urlLang === "zh") return urlLang;
-      const saved = window.localStorage.getItem("homepage_lang");
-      if (saved === "en" || saved === "zh") return saved;
-    } catch (_) {
-      // Ignore storage errors in restricted environments
-    }
-    return data.meta.defaultLang === "zh" ? "zh" : "en";
-  }
-
   function t(val) {
     if (val == null) return "";
     if (typeof val === "string") return val;
-    return val[state.lang] != null ? val[state.lang] : val.en || "";
+    return val.en || "";
+  }
+
+  function listOf(val) {
+    if (Array.isArray(val)) return val;
+    if (val && Array.isArray(val.en)) return val.en;
+    return [];
   }
 
   function escapeHtml(str) {
@@ -171,10 +163,10 @@
     const el = document.getElementById("about-me");
     if (!el) return;
 
-    const paragraphs = (data.about.paragraphs[state.lang] || data.about.paragraphs.en || [])
+    const paragraphs = listOf(data.about.paragraphs)
       .map((p) => `<p>${p}</p>`)
       .join("");
-    const interests = (data.about.interests[state.lang] || data.about.interests.en || [])
+    const interests = listOf(data.about.interests)
       .map((item) => `<li>${item}</li>`)
       .join("");
     const closing = t(data.about.closingNote)
@@ -242,7 +234,7 @@
             ? `<a href="${escapeHtml(paper.titleUrl)}" target="_blank" rel="noopener">${escapeHtml(paper.title)}</a>`
             : `<span>${escapeHtml(paper.title)}</span>`;
 
-        const notes = (paper.notes && (paper.notes[state.lang] || paper.notes.en)) || [];
+        const notes = listOf(paper.notes);
         const notesHtml = notes.length
           ? `<ul class="paper-meta-list">${notes.map((n) => `<li>${n}</li>`).join("")}</ul>`
           : "";
@@ -399,9 +391,9 @@
 
     el.hidden = false;
     const hs = data.honorsSkills;
-    const honorsItems = hs.honors[state.lang] || hs.honors.en || [];
+    const honorsItems = listOf(hs.honors);
     const honorsList = honorsItems.map((item) => `<li>${item}</li>`).join("");
-    const skillsItems = (hs.skills && (hs.skills[state.lang] || hs.skills.en)) || [];
+    const skillsItems = listOf(hs.skills);
     const skillsList = skillsItems
       .map(
         (s) => `
@@ -745,19 +737,6 @@
     renderAcknowledgements();
     renderContact();
   }
-
-  document.querySelectorAll(".lang-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const nextLang = btn.dataset.lang;
-      if (nextLang !== "en" && nextLang !== "zh") return;
-      if (nextLang === state.lang) return;
-      state.lang = nextLang;
-      try {
-        window.localStorage.setItem("homepage_lang", nextLang);
-      } catch (_) {}
-      renderAll();
-    });
-  });
 
   renderAll();
   setupScrollSpy();
