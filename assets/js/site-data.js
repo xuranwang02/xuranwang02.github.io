@@ -258,6 +258,20 @@ window.SITE_DATA = {
         url: "https://yiranzhu06.github.io/",
         affiliation: "Research Intern · LivSyn Robotics | Incoming Master's Student · BIVLab, USTC",
         text: "Thank you for your genuine warmth and kindness, and for so generously sharing inspired research ideas, cutting-edge technologies, and invaluable ICLR rebuttal experience."
+      },
+      {
+        id: "kaifan-jia",
+        name: "Kaifan Jia",
+        url: "",
+        affiliation: "ISRC · Institute of Software, Chinese Academy of Sciences (ISCAS)",
+        text: "Thank you for guiding me into the fields of high-performance computing (HPC) and AI. Your sharp and active research thinking, along with your generosity in sharing cutting-edge research ideas, has continually broadened my horizons."
+      },
+      {
+        id: "yongchun-jiang",
+        name: "Yongchun Jiang",
+        url: "",
+        affiliation: "ISRC · Institute of Software, Chinese Academy of Sciences (ISCAS)",
+        text: "Thank you for nurturing my logical research thinking and habit of rigorous self-questioning, for helping me grasp the fundamental principles of academic writing, and for guiding me into the field of temporal graph research."
       }
     ]
   },
