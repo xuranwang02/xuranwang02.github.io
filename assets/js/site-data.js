@@ -227,7 +227,7 @@ window.SITE_DATA = {
   acknowledgements: {
     emoji: "🤝",
     heading: "Acknowledgements",
-    intro: "I am deeply grateful to the mentors who have guided, inspired, and supported me throughout my research journey.",
+    intro: "I am deeply grateful to the mentors and friends who have guided, inspired, and supported me throughout my research journey.",
     sortAlphabetically: true,
     note: "Listed alphabetically by first name.",
     people: [
@@ -251,6 +251,13 @@ window.SITE_DATA = {
         url: "https://faculty.neu.edu.cn/zhangchangsheng/zh_CN/index.htm",
         affiliation: "Professor · Software College, Northeastern University (NEU)",
         text: "I am sincerely grateful to my undergraduate advisor, Prof. Changsheng Zhang, for his patient supervision and valuable guidance throughout my undergraduate thesis at Northeastern University. His rigor and encouragement laid a solid foundation for my subsequent graduate research."
+      },
+      {
+        id: "yiran-zhu",
+        name: "Yiran Zhu",
+        url: "https://yiranzhu06.github.io/",
+        affiliation: "Research Intern · LivSyn Robotics | Incoming Master's Student · BIVLab, USTC",
+        text: "Thank you for your genuine warmth and kindness, and for so generously sharing inspired research ideas, cutting-edge technologies, and invaluable ICLR rebuttal experience."
       }
     ]
   },
