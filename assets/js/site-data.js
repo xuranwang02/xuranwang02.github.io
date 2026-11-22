@@ -218,7 +218,7 @@ window.SITE_DATA = {
     honors: [
       '<strong>1st Place, “Developer Talent Award” &amp; Excellence Award (“Object-Search Navigation” Track)</strong>, <a href="https://irobotdeveloper.csdn.net/campcenter" target="_blank" rel="noopener">Intelligent Robot Developer Competition</a> (Representing ISCAS, Team Xuxiaofan Yuanhang, Jan 2026)',
       "<strong>Outstanding Graduate of Liaoning Province</strong> (Jun 2025)",
-      "<strong>National Scholarship</strong>"
+      "<strong>National Scholarship</strong> (2025)"
     ],
     skillsTitle: null,
     skills: []
