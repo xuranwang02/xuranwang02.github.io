@@ -216,9 +216,9 @@ window.SITE_DATA = {
     heading: "Honors & Awards",
     honorsTitle: null,
     honors: [
-      "<strong>National Scholarship</strong>",
-      "<strong>Outstanding Graduate of Liaoning Province</strong>",
-      '<strong>1st Place, “Developer Talent Award” &amp; Excellence Award (“Object-Search Navigation” Track)</strong>, <a href="https://irobotdeveloper.csdn.net/campcenter" target="_blank" rel="noopener">Intelligent Robot Developer Competition</a> (Representing ISCAS, Team Xuxiaofan Yuanhang, Jan 2026)'
+      '<strong>1st Place, “Developer Talent Award” &amp; Excellence Award (“Object-Search Navigation” Track)</strong>, <a href="https://irobotdeveloper.csdn.net/campcenter" target="_blank" rel="noopener">Intelligent Robot Developer Competition</a> (Representing ISCAS, Team Xuxiaofan Yuanhang, Jan 2026)',
+      "<strong>Outstanding Graduate of Liaoning Province</strong> (Jun 2025)",
+      "<strong>National Scholarship</strong>"
     ],
     skillsTitle: null,
     skills: []
