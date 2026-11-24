@@ -77,7 +77,15 @@ window.SITE_DATA = {
     heading: "News",
     items: [
       {
-        date: "2026",
+        date: "Sep 2026",
+        html: 'Our paper <a href="https://www.iccd-conf.com/2026/fullprogram.html#pp-6A-3" target="_blank" rel="noopener"><em>Flash-TGN: IO-Aware Fused Execution for Temporal Graph Network Training</em></a> was accepted to <strong>ICCD 2026 (CCF-B)</strong>.'
+      },
+      {
+        date: "Sep 2026",
+        html: 'Our paper <a href="https://www.iccd-conf.com/2026/fullprogram.html#pp-5A-6" target="_blank" rel="noopener"><em>COVE: Co-Designing Position Indexing and Error-Bounded Value Compression for High-Performance SpMV on GPUs</em></a> was accepted to <strong>ICCD 2026 (CCF-B)</strong>.'
+      },
+      {
+        date: "Jul 2026",
         html: 'Our paper <a href="https://sc26.supercomputing.org/proceedings/papers/paper_pages/pap257.html" target="_blank" rel="noopener"><em>BTC-TC: Exact GPU Triangle Counting with Hybrid Bit Tensor Cores and CUDA Cores</em></a> was accepted to <strong>SC 2026 (CCF-A)</strong>.'
       },
       {
@@ -93,8 +101,8 @@ window.SITE_DATA = {
         html: "Graduated from <strong>Northeastern University (NEU)</strong> with a B.Eng. in Software Engineering and honored as <strong>Outstanding Graduate of Liaoning Province</strong>."
       },
       {
-        date: "2025",
-        html: 'Our paper <a href="https://doi.org/10.1109/icde65448.2025.00082" target="_blank" rel="noopener"><em>TeMatch: A Fast Temporal Subgraph Matching Framework with Temporal-Aware Subgraph Matching Algorithms</em></a> was published in <strong>ICDE 2025 (CCF-A)</strong>.'
+        date: "Nov 2024",
+        html: 'Our paper <a href="https://doi.org/10.1109/icde65448.2025.00082" target="_blank" rel="noopener"><em>TeMatch: A Fast Temporal Subgraph Matching Framework with Temporal-Aware Subgraph Matching Algorithms</em></a> was accepted to <strong>ICDE 2025 (CCF-A)</strong>.'
       }
     ]
   },
@@ -103,6 +111,52 @@ window.SITE_DATA = {
     emoji: "📝",
     heading: "Selected Research",
     items: [
+      {
+        badge: "ICCD 2026",
+        image: "assets/images/paper-flashtgn.png",
+        imageAlt: "Flash-TGN IO-aware fused execution architecture diagram",
+        title: "Flash-TGN: IO-Aware Fused Execution for Temporal Graph Network Training",
+        titleUrl: "https://www.iccd-conf.com/2026/fullprogram.html#pp-6A-3",
+        authors: [
+          { name: "Yongchun Jiang" },
+          { name: "Heng Zhang", note: "*" },
+          { name: "Kaifan Jia" },
+          { name: "Xuran Wang", isOwner: true },
+          { name: "Minghui Zhang" },
+          { name: "Zhihao Ling" }
+        ],
+        notes: [
+          "<em>The 44th IEEE International Conference on Computer Design (ICCD 2026, CCF-B)</em>."
+        ],
+        links: [
+          { label: "ICCD'26 Program", url: "https://www.iccd-conf.com/2026/fullprogram.html#pp-6A-3" }
+        ],
+        abstract:
+          "Temporal Graph Networks (TGNs) model continuous-time temporal graphs by maintaining evolving node memories and aggregating historical neighbors for each interaction. This memory-based design is central to TGN accuracy, but it makes training difficult to optimize: each mini-batch must commit node-memory updates in chronological order while assembling attention inputs online from node features, memory states, edge features, and time encodings through irregular temporal-neighbor indices. Existing execution decomposes this online path into fine-grained irregular operators, causing short-lived intermediate tensors to be repeatedly materialized and reloaded through HBM. However, these transfers are not equally constrained by TGN semantics. This exposes an opportunity to remove artificial operator boundaries while preserving the true temporal and gradient dependencies. We present Flash-TGN, an IO-aware fused execution system for TGN training. Flash-TGN uses operator-level dependency analysis to separate topology-only, batch-local state-dependent, and chronology-critical work, then applies three mechanisms: Topology-Decoupled Preprocessing moves sampling, deduplication, and index remapping out of the online memory-dependent path; Correlated Gather-Encode Fusion combines node, memory, and edge gather with time encoding and tuple assembly into one indexed HBM pass; and On-Chip Scattered Attention keeps small segmented attention working sets on chip with compact saved state and recomputation for backward. On H100, Flash-TGN improves training throughput by 1.32–1.55× over the state-of-the-art PULSE while preserving AP/AUC, reaches 2.80× on large graphs, and reduces gather-encode DRAM traffic by 51.2% on average."
+      },
+      {
+        badge: "ICCD 2026",
+        image: "assets/images/paper-cove.png",
+        imageAlt: "COVE co-designed position indexing and error-bounded value compression diagram",
+        title: "COVE: Co-Designing Position Indexing and Error-Bounded Value Compression for High-Performance SpMV on GPUs",
+        titleUrl: "https://www.iccd-conf.com/2026/fullprogram.html#pp-5A-6",
+        authors: [
+          { name: "Kaifan Jia" },
+          { name: "Yongchun Jiang" },
+          { name: "Minghui Zhang" },
+          { name: "Zhihao Ling" },
+          { name: "Xuran Wang", isOwner: true },
+          { name: "Heng Zhang", note: "*" }
+        ],
+        notes: [
+          "<em>The 44th IEEE International Conference on Computer Design (ICCD 2026, CCF-B)</em>."
+        ],
+        links: [
+          { label: "ICCD'26 Program", url: "https://www.iccd-conf.com/2026/fullprogram.html#pp-5A-6" }
+        ],
+        abstract:
+          "Sparse Matrix-vector Multiplication (SpMV) is an important operation in scientific computing and deep learning. Existing work improves SpMV along two complementary directions: structural formats that compress index metadata and improve scheduling, and value-side optimizations that lower precision (e.g., FP32, FP16/BF16, quantized values) to save bandwidth. However, current approaches suffer from three key limitations: (1) value compression is treated separately from structural format design, missing co-design opportunities; (2) precision is assigned independently of the sparsity pattern; and (3) error is validated per value rather than on the final SpMV output, ignoring propagation into the result vector. Our key insight is that a sparse format already eliminates zeros as a value compressor, and for matrices from deep learning or constraint problems where positions and values originate from the same local interaction process, the remaining nonzeros exhibit regularity at that same local granularity. Motivated by this observation, we design COVE, an efficient GPU SpMV framework, by co-designing sparse block position indexing and value encoding over one shared 8×4 block unit. Three key novel strategies are proposed in COVE: (1) a lossless position encoding—one 64-bit word per block, long rows split into CSR chunks—cuts index traffic, regularizes vector access, and balances load in one launch; (2) an error-bounded value encoding on the same unit—exact dictionaries where values repeat, per-block block floating point with a magnitude-outlier pass—admitted per matrix only if the SpMV output error stays within budget; (3) one fused kernel decodes both encodings in registers, with the two admission gates kept independent. Across 1000 verified and 3624 coverage-scale SuiteSparse matrices on three GPU generations, the lossless position hybrid outperforms cuSPARSE-double by 1.64–1.71× geometric mean; the value encoding cuts value storage from 8 to 1.73 bytes per nonzero with 98.7–100% of matrices within a 10⁻² output-error budget; and the two savings stack up to 2.9× on large bandwidth-bound matrices."
+      },
       {
         badge: "SC 2026",
         image: "assets/images/paper-btctc.png",
@@ -124,7 +178,9 @@ window.SITE_DATA = {
         ],
         links: [
           { label: "SC'26 Proceedings", url: "https://sc26.supercomputing.org/proceedings/papers/paper_pages/pap257.html" }
-        ]
+        ],
+        abstract:
+          "Triangle counting is fundamental to graph analytics, yet GPUs face a tension between exact, irregular adjacency-list intersection and regular, inaccurate FP16 Tensor Core execution. ToT's FP16 pipeline is incorrect on 12 of 36 inputs and requires pre-kernel symbolic matching. We observe that semantic alignment alone is insufficient under heterogeneous mask density. We present BTC-TC, an exact system built around binary MMA. AND–popcount implements common-neighbor counting with 32-bit accumulation and enables online block matching. Because mask density varies, BTC-TC combines multi-granularity Bit-BSR with two-level adaptivity: it selects block geometry per graph, dispatches dense blocks to Bit Tensor Cores, and routes sparse blocks to CUDA cores. Across 36 inputs and 12 baselines on RTX PRO 6000, BTC-TC achieves the lowest post-clean end-to-end time on every input, with 1.92× geometric-mean kernel and 8.0× end-to-end speedups over ToT. It matches CPU ground truth on every input and maintains the gains on H100 and A800."
       },
       {
         badge: "ICDE 2025",
@@ -147,7 +203,9 @@ window.SITE_DATA = {
         ],
         links: [
           { label: "DOI / IEEE Xplore", url: "https://doi.org/10.1109/icde65448.2025.00082" }
-        ]
+        ],
+        abstract:
+          "Temporal subgraph matching aims to identify occurrences of a query graph within a large target graph, subject to certain temporal constraints that require that timestamps on the edges increase in accordance with the direction of the path. Current research on temporal subgraph matching typically identifies each non-temporal match and then filters out occurrences by examining all paths within each occurrence for compliance with temporal constraints. However, this approach proves to be highly inefficient, as it involves excessive unnecessary computation on non-temporal occurrences that do not meet the temporal constraints and can be pruned early during the matching process. Moreover, the constraint examination on all paths within each occurrence further results in numerous redundant timestamp comparisons. Therefore, a high-performance solution is demanded to overcome these drawbacks. In this paper, we introduce TeMatch, a high-performance framework designed to be compatible with any enumeration-based solution for temporal subgraph matching. TeMatch features a novel topological representation of temporal constraints in the query graph, along with three temporal-aware subgraph matching algorithms that enable rapid constraint checking and enhance early pruning and filtration. Extensive experiments reveal that TeMatch efficiently harnesses temporal information to enable early pruning and achieves a speedup of 313.57× while being parallel-friendly, highly compatible, and yielding identical matching results."
       }
     ]
   },

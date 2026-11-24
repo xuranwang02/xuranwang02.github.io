@@ -214,7 +214,7 @@
     if (!el) return;
 
     const cardsHtml = (data.publications.items || [])
-      .map((paper) => {
+      .map((paper, idx) => {
         const authorsHtml = (paper.authors || [])
           .map((author) => {
             const nameText = escapeHtml(author.name);
@@ -239,15 +239,25 @@
           ? `<ul class="paper-meta-list">${notes.map((n) => `<li>${n}</li>`).join("")}</ul>`
           : "";
 
-        const linksHtml =
-          paper.links && paper.links.length
-            ? `<div class="paper-links">${paper.links
-                .map((lk) => {
-                  const ext = /^https?:\/\//i.test(lk.url) ? ' target="_blank" rel="noopener"' : "";
-                  return `<a class="paper-link-pill" href="${escapeHtml(lk.url)}"${ext}>${escapeHtml(lk.label)}</a>`;
-                })
-                .join("")}</div>`
-            : "";
+        const abstractText = t(paper.abstract);
+        const abstractId = `paper-abstract-${idx}`;
+        const linkPills = (paper.links || []).map((lk) => {
+          const ext = /^https?:\/\//i.test(lk.url) ? ' target="_blank" rel="noopener"' : "";
+          return `<a class="paper-link-pill" href="${escapeHtml(lk.url)}"${ext}>${escapeHtml(lk.label)}</a>`;
+        });
+        if (abstractText) {
+          linkPills.push(
+            `<button type="button" class="paper-link-pill paper-abstract-toggle" aria-expanded="false" aria-controls="${abstractId}">Abstract</button>`
+          );
+        }
+
+        const linksHtml = linkPills.length
+          ? `<div class="paper-links">${linkPills.join("")}</div>`
+          : "";
+
+        const abstractHtml = abstractText
+          ? `<div class="paper-abstract" id="${abstractId}" hidden><p>${escapeHtml(abstractText)}</p></div>`
+          : "";
 
         return `
           <article class="paper-box">
@@ -260,6 +270,7 @@
               <p class="paper-authors">${authorsHtml}</p>
               ${notesHtml}
               ${linksHtml}
+              ${abstractHtml}
             </div>
           </article>
         `;
@@ -270,6 +281,17 @@
       ${renderSectionHeading(data.publications.emoji, t(data.publications.heading))}
       <div class="paper-list">${cardsHtml}</div>
     `;
+
+    el.querySelectorAll(".paper-abstract-toggle").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const panelId = btn.getAttribute("aria-controls");
+        const panel = panelId ? document.getElementById(panelId) : null;
+        if (!panel) return;
+        const nextOpen = btn.getAttribute("aria-expanded") !== "true";
+        btn.setAttribute("aria-expanded", String(nextOpen));
+        panel.hidden = !nextOpen;
+      });
+    });
   }
 
   /* ------------------------------------------------------------------------
