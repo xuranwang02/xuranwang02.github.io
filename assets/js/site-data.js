@@ -86,7 +86,7 @@ window.SITE_DATA = {
       },
       {
         date: "Jul 2026",
-        html: 'Our paper <a href="https://sc26.supercomputing.org/proceedings/papers/paper_pages/pap257.html" target="_blank" rel="noopener"><em>BTC-TC: Exact GPU Triangle Counting with Hybrid Bit Tensor Cores and CUDA Cores</em></a> was accepted to <strong>SC 2026 (CCF-A)</strong>.'
+        html: 'Our paper <a href="https://sc26.supercomputing.org/proceedings/papers/paper_pages/pap257.html" target="_blank" rel="noopener"><em>BTC-TC: Exact GPU Triangle Counting with Hybrid Bit Tensor Cores and CUDA Cores</em></a> was accepted to <strong>SC 2026 (CCF-A)</strong>, and its AD/AE appendix was selected as a <strong>Finalist for the Best Reproducibility Advancement Award</strong>.'
       },
       {
         date: "Jan 2026",
@@ -174,7 +174,8 @@ window.SITE_DATA = {
           { name: "Heng Zhang", note: "*" }
         ],
         notes: [
-          "<em>The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC 2026, CCF-A)</em>."
+          "<em>The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC 2026, CCF-A)</em>.",
+          '🏆 <strong class="paper-award">Finalist, Best Reproducibility Advancement Award</strong> (SC26 Artifact Description &amp; Artifact Evaluation Appendix).'
         ],
         links: [
           { label: "SC'26 Proceedings", url: "https://sc26.supercomputing.org/proceedings/papers/paper_pages/pap257.html" }
@@ -274,6 +275,7 @@ window.SITE_DATA = {
     heading: "Honors & Awards",
     honorsTitle: null,
     honors: [
+      '<strong>Finalist, Best Reproducibility Advancement Award</strong>, <a href="https://sc26.supercomputing.org/proceedings/papers/paper_pages/pap257.html" target="_blank" rel="noopener">SC 2026</a> (AD/AE Appendix of <em>BTC-TC</em>, 2026)',
       '<strong>1st Place, “Developer Talent Award” &amp; Excellence Award (“Object-Search Navigation” Track)</strong>, <a href="https://irobotdeveloper.csdn.net/campcenter" target="_blank" rel="noopener">Intelligent Robot Developer Competition</a> (Representing ISCAS, Team Xuxiaofan Yuanhang, Jan 2026)',
       "<strong>Outstanding Graduate of Liaoning Province</strong> (Jun 2025)",
       "<strong>National Scholarship</strong> (2025)"

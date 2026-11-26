@@ -469,6 +469,11 @@ img {
   margin-bottom: 0.28rem;
 }
 
+.paper-award {
+  color: #9a3412;
+  font-weight: 700;
+}
+
 .paper-links {
   margin-top: 0.6rem;
   display: flex;
